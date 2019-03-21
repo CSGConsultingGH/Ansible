@@ -1,0 +1,11 @@
+all:
+  children:
+    ec2:
+      hosts:
+        3.82.110.50:
+          ansible_ssh_user: ec2-user
+        3.83.132.143:
+          ansible_ssh_user: ec2-user
+        3.86.247.168:
+          ansible_ssh_user: ec2-user
+

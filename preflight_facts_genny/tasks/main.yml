@@ -1,0 +1,14 @@
+---
+# tasks file for preflight_facts_genny
+#
+- name: Gather facts from new server
+  hosts: ec2
+  setup:
+    filter: ansible_default_ipv4.address
+  vars_files:
+    - vars/vars.yml
+  gather_facts: True
+
+  #tasks:
+  #  # Displaying all variables/facts known for host {{ inventory_hostname }}
+  #  - debug: var=hostvars[inventory_hostname]['ansible_eth0']['ipv4']['address']
